@@ -23,6 +23,13 @@
 			<artifactId>vertx-config</artifactId>
 			<version>${vertx.version}</version>
 		</dependency>
+		
+		<!-- only use for vertx cluster -->
+		<dependency>
+			<groupId>io.vertx</groupId>
+			<artifactId>vertx-hazelcast</artifactId>
+			<version>3.8.5</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -44,8 +51,8 @@
 				<executions>
 					<!-- app 1: dùng io.vertx.core.Starter để run Verticle -->
 					<!-- có thể đưa config vào commandline -->
-					<!--       java -jar vertx-docker-config-starter.jar -conf ../src/config/local.json -->
-					<!-- Starter đã bị Depreciate, dùng Launcher thay thế -->				
+					<!-- java -jar vertx-docker-config-starter.jar -conf ../src/config/local.json -->
+					<!-- Starter đã bị Depreciate, dùng Launcher thay thế -->
 					<execution>
 						<!-- id phải duy nhất ko trùng lặp -->
 						<id>build-1</id>
@@ -64,7 +71,7 @@
 									</manifestEntries>
 								</transformer>
 							</transformers>
-							<artifactSet/>
+							<artifactSet />
 							<!-- <outputFile>${project.build.directory}/${project.artifactId}-${project.version}-fat.jar</outputFile> -->
 							<finalName>vertx-docker-config-starter</finalName>
 						</configuration>
@@ -72,8 +79,8 @@
 
 					<!-- app 2: dùng io.vertx.core.Launcher để run Verticle -->
 					<!-- có thể đưa config vào commandline -->
-					<!--       java -jar vertx-docker-config-laucher.jar -conf ../src/config/local.json -->
-					<!-- Starter đã bị Depreciate, dùng Launcher thay thế -->	
+					<!-- java -jar vertx-docker-config-laucher.jar -conf ../src/config/local.json -->
+					<!-- Starter đã bị Depreciate, dùng Launcher thay thế -->
 					<execution>
 						<id>build-2</id>
 						<phase>package</phase>
