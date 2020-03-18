@@ -27,7 +27,10 @@ public class App1_Verticle_config_launcher extends AbstractVerticle {
 	public void start(Future<Void> startFuture) throws Exception {	
 		super.start();
 		
-		// ../src/config/local.json
+		/**
+		 *  launcher will get commandline arguments and get config from json file: ../src/config/local.json
+		 *   
+		 */
 		System.out.println(config().toString());
 	}
 
