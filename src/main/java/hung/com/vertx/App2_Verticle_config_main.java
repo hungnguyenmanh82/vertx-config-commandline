@@ -17,7 +17,13 @@ public class App2_Verticle_config_main extends AbstractVerticle {
 	@Override
 	public void start(Future<Void> startFuture) throws Exception {	
 		super.start();
-		// có thư viện riêng để lấy config từ file, env, system, http,...=> tiện hơn
+		
+		/**
+		 * Vertx có thư viện riêng để lấy config từ: file json, env, system, http restful...=> tiện hơn dùng commandline
+		 *  
+		 */
+		
+		// cách này ko dùng launcher hay Starter nên ko load đc config từ commandline
 		System.out.println(config().toString());
 	}
 
