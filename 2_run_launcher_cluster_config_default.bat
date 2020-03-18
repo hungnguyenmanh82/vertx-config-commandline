@@ -3,4 +3,6 @@
 :: dung lenh "pause" window lai de xem exception
 :: user default cluster config with Hazelcast ( -cluster -ha )
 java  -jar ./target/vertx-docker-config-launcher.jar -cluster -conf ./src/config/local.json
+
+:: lenh nay de CMD window ko bi close khi gap error
 pause
