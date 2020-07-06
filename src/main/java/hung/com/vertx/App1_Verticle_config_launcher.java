@@ -17,7 +17,7 @@ https://vertx.io/docs/vertx-core/java/#_the_vertx_command_line
 
 /**
 io.vertx.core.Launcher và io.vertx.core.Starter dùng như nhau.
-io.vertx.core.Starter: đã depreciated rồi. Nhưng các vd trên github dùng nhiều.
+io.vertx.core.Starter: đã deprecated rồi. Nhưng các vd trên github dùng nhiều.
 io.vertx.core.Launcher: nên dùng. 
  */
 // io.vertx.core.Starter.main() will deploy this Vertical lấy config Vertx từ commandline
