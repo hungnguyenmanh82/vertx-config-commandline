@@ -3,6 +3,7 @@ package hung.com.vertx;
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.Future;
 import io.vertx.core.Vertx;
+import io.vertx.core.json.JsonObject;
 
 /**
 https://vertx.io/docs/vertx-core/java/#_the_vertx_command_line
@@ -28,10 +29,11 @@ public class App1_Verticle_config_launcher extends AbstractVerticle {
 		super.start();
 		
 		/**
-		 *  launcher will get commandline arguments and get config from json file: ../src/config/local.json
-		 *   
+		 *  launcher will get commandline arguments and get config from json file: ./src/config/local.json
+		 *  Vertx có thư viện riêng để lấy config từ: file json, env, system, http restful...=> tiện hơn dùng commandline 
 		 */
-		System.out.println(config().toString());
+		JsonObject config = config();
+		System.out.println(config.toString());
 	}
 
 

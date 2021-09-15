@@ -1,4 +1,4 @@
-FROM java:8-jre
+FROM openjdk:8-jre-alpine
 
 # ENV của dockerfile, ko phải của Linux container
 ENV VERTICLE_FILE target/vertx-docker-config-Launcher.jar

@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  vertx-commandline: #  <imageName> = <folderName>  + <serviceName>
+    build:
+      context: . # folder contains <dockerfileName>
+      dockerfile: main.Dockerfile # <dockerfileName>
+    # cách 1: nếu viết kiểu YAML list. 
+    # cách 2: viết kiểu array YAML ok ["param1", "param2"]
+    # cách 3: viết các params cách nhau bởi whitespace "param1 param2 param3" 
+    command: 
+      - '--config.file=/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/data'
